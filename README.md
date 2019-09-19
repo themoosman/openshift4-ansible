@@ -31,15 +31,11 @@ Become root and install the needed tools:
 ```bash
 sudo -i
 
-subscription-manager repos --enable rhel-7-server-ansible-2.8-rpms
-
-yum install -y ansible
-
 yum install -y \
   https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 
 yum -y install \
-  python2-boto python2-boto3 python2-simplejson
+  ansible git python2-boto python2-boto3 python2-simplejson
 
 yum erase -y epel-release
 
